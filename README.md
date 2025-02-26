@@ -28,11 +28,14 @@ This is a **React.js web application** for browsing job offers with support for 
 
 ---
 
-## 📸 Screenshots (Coming Soon)
+## 📸 Screenshots
 
-*Screenshots of the website will be added once development progresses further.*
+### 🌙 Home Page (Desktop)
+![For Desktop](public/desktop_.png)
 
----
+### 🏠 Home Page (Mobile)
+![For Mobile](public/mobile_.png)
+
 
 ## 🔧 Installation & Setup
 
