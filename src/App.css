@@ -36,8 +36,19 @@ body {
   align-items: start;
   padding: 32px 165px;
   border-radius: 0 0 0 100px;
+  animation: slideDown 0.8s ease-out;
 }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .logo {
   color: white;
   font-size: 32px;
@@ -97,6 +108,18 @@ body {
 .search-container {
   margin-top: -35px;
   padding: 0 165px;
+  animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .search-bar {
@@ -215,7 +238,21 @@ body {
   padding: 32px;
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cardFadeIn 0.9s ease-in-out forwards;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(200px);  
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .company-logo {
