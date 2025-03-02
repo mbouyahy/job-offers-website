@@ -1,22 +1,20 @@
 import "./App.css";
-import Header from "./components/Header.jsx";
-import Search from "./components/Search.jsx";
-import Offers from "./components/Offers.jsx";
-
-import { useState } from "react";
+import Home from "./components/Home.jsx";
+import Details from "./components/offerDetails.jsx";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
-  const [location, setLocation] = useState("");
-  const [searchTerm, setSearchTerm] = useState("");
-  const [isFullTimeOnly, setIsFullTimeOnly] = useState(false);
-
   return (
-    <div className="app">
-      <Header />
-      <Search setLocation={setLocation} setSearchTerm={setSearchTerm} setIsFullTimeOnly={setIsFullTimeOnly}/>
-      <Offers location={location} searchTerm={searchTerm} isFullTimeOnly={isFullTimeOnly}/>
-      
-    </div>
+    <>
+      <div className="app">
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/offer/:offer_id" element={<Details />} />
+          </Routes>
+        </Router>
+      </div>
+    </>
   );
 }
 
